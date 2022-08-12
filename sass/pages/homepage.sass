@@ -1,0 +1,278 @@
+@import design-tokens/colors
+@import design-tokens/mixins
+@import design-tokens/var
+.main
+    &__advantage
+        &__title
+            -webkit-text-fill-color: #fff
+            max-width: 800px
+            margin: 331px auto 405px
+            text-align: center
+            @media (max-width: 1440px) 
+                margin: 231px auto 305px 
+            @media (max-width: 1024px) 
+                margin: 324px auto 401px
+            @media (max-width: 980px) 
+                margin: 231px auto 401px
+            @media (max-width: 640px) 
+                font-size: 2.375rem
+                margin: 130px auto 175px
+        &__btn
+            width: 42px
+            height: 42px
+            margin: 0 auto 90px
+            cursor: pointer
+            svg
+                stroke: #fff
+                transition: all .3s ease-out
+                &:hover
+                    stroke: $col_accent
+        &__content
+            display: flex
+            align-items: center
+            column-gap: 60px
+            justify-content: center 
+            @media (max-width: 980px) 
+                display: block
+            &__list
+                padding-right: 60px
+                border-right:4px solid rgba(255, 255, 255, 0.3)
+                @media (max-width: 980px) 
+                    display: flex
+                    overflow: scroll
+                    padding: 60px 0
+                    column-gap: 30px
+                    border-right: none
+                    border-bottom:4px solid rgba(255, 255, 255, 0.3)
+                    &::-webkit-scrollbar 
+                        width: 0
+                &__item
+                    justify-content: flex-end
+                    width: 400px
+                    padding: 15px 0 15px
+                    @media (max-width: 980px) 
+                        width: auto
+                        white-space: nowrap
+                        padding: 0
+                    &.active
+                        position: relative
+                        h2
+                            background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%) !important
+                            background-clip: text
+                            -webkit-background-clip: text  !important
+                            -webkit-text-fill-color: transparent
+                    h2
+                        transition: all .3s ease-out
+                        -webkit-text-fill-color: $col_gray-text
+                        &:hover
+                            -webkit-text-fill-color: $col_accent
+                    &::before
+                        content: ''
+            &__desc
+                max-width: 870px
+                width: 53%
+                @media (max-width: 980px) 
+                    max-width: 100%
+                    width: 100%
+                &__item
+                    color: #fff
+                    display: none
+                    &.active
+                        display: block
+                    @media (max-width: 1440px)
+                        max-width: 590px
+                    @media (max-width: 980px)
+                        max-width: 100%
+                    h3
+                        color: #fff
+                        @media (max-width: 980px)
+                            padding: 60px 0 30px
+                    p
+                        font: 400 1.1875rem/1.875rem 'Montserrat'
+
+    &__service
+        padding-bottom: 60px 
+        margin: 60px 0 80px
+        @media (max-width: 640px)
+            margin: 30px 0 50px
+        h2
+            padding-bottom: 60px
+            @media (max-width: 640px)
+                padding-bottom: 30px
+        &__list
+            @include flex 
+            align-items: start
+            row-gap: 60px
+            justify-content: space-between
+            @media (max-width: 640px)
+                row-gap: 30px
+            &__item
+                width: 45.37%
+                @media (min-width: 1024px)
+                    width: 28.8%
+                @media (max-width: 640px)
+                    width: 100%
+                &__img
+                    background-color: #fff
+                    width: 92px
+                    height: 92px
+                    border-radius: 24px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    &:hover
+                        transform: scale(1.05)
+                a
+                    h4
+                        @include hoverAcccept
+                        padding: 30px 0 15px
+                p
+                    color: #fff
+                    line-height: 1.625rem
+    &__team
+        margin-bottom: 60px
+        @media (max-width: 1440px)
+            margin-bottom: 0
+        &__slider
+            display: flex
+            @media (max-width: 980px)
+                display: block
+            &__img
+                width: 600px
+                @media (max-width: 980px)
+                    width: 100%
+                    height: 500px
+                img
+                    display: block
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    border-radius: 12px 0 0 12px
+            &__desc
+                background-color: $col_gray-bg
+                padding-left: 30px
+                border-radius: 0 12px 12px 0
+                @media (max-width: 1024px)
+                    width: 55.7522%
+                @media (max-width: 980px)
+                    width: 100%
+                h2
+                    max-width: 1140px
+                    padding: 5px 0 30px
+                &__name
+                    font-weight: 700
+                    color: $col_gray-text
+                    padding-bottom: 6px
+                &__post
+                    font-size: 0.875rem
+                    color: $col_gray-text
+        &__partners
+            p
+                max-width: 210px
+                margin: 0 auto
+            &__list
+                @include flex 
+                margin-left: -60px
+                margin-right: -60px
+                @media (max-width: 640px)
+                    margin: 30px -30px 0
+                &__item
+                    @include flex 
+                    width: 25%
+                    height: 120px
+                    @media (max-width: 980px)
+                        width: 33.3333%
+                    @media (max-width: 640px)
+                        width: 100%
+                    img
+                        margin: 0 auto
+                    &:nth-child(1)
+                        background-color: #1C4280
+                        border-radius: 8px 0 0 0 
+                        @media (max-width: 1440px)
+                            border-radius: 0
+                    &:nth-child(2)
+                        background-color: #143646
+                    &:nth-child(3)
+                        background-color: #F48B30
+                    &:nth-child(4)
+                        background-color: #9E4DC3
+                        border-radius: 0 8px 0 0 
+                        @media (max-width: 1440px)
+                            border-radius: 0
+                    &:nth-child(5)
+                        background-color: #FD9339
+                    &:nth-child(6)
+                        background-color: #E2E2E4
+                    &:nth-child(7)
+                        background-color: #C71C36
+                    &:nth-child(8)
+                        background-color: #DCF3F9
+                    &:nth-child(9)
+                        background-color: #EAEAEA
+                        border-radius: 0 0 0 8px
+                        @media (max-width: 1440px)
+                            border-radius: 0
+                    &:nth-child(10)
+                        background-color: #282240
+                    &:nth-child(11)
+                        background-color: #1D4568
+                    &:nth-child(12)
+                        background-color: #000000
+                        border-radius: 0 0 8px 0
+                        @media (max-width: 1440px)
+                            border-radius: 0
+    &__publication
+        &__nav
+            padding: 30px 0 10px
+        &__articles
+            display: flex
+            column-gap: 30px
+            border-bottom: 2px solid #E6E6F0
+            @media (max-width: 980px)
+                flex-wrap: wrap
+                row-gap: 30px
+                column-gap: 0
+                justify-content: space-between
+            &__item
+                width: 33.3333%
+                position: relative
+                height: 430px
+                @media (max-width: 1440px)
+                    height: 450px
+                @media (max-width: 980px)
+                    width: 47.68%
+                    &:nth-child(3n)
+                        width: 100%    
+                @media (max-width: 640px) 
+                    width: 100%
+                &:hover
+                    transform: scale(1.05)
+                img
+                    width: 100%
+                    height: 200px
+                    object-fit: cover
+                    border-radius: 12px 12px 0 0 
+                &__content
+                    background-color: #fff
+                    border-radius: 0 0 12px 12px
+                    height: 230px
+                    padding: 30px
+                    overflow: hidden
+                    @include hiddenText
+                    @media (max-width: 1440px)
+                        height: 250px
+                    div
+                        color: $col_gray-text
+                        text-transform: uppercase
+                        font:700 0.75rem 'Montserrat'
+                        padding-top: 15px
+                    p
+                        margin-top: 15px
+                        padding-top: 15px 
+                        border-top: 4px solid #E6E6F0
+                        color: #000
+                        font:400 0.875rem/1.375rem 'Montserrat'
+
+                        
+                    

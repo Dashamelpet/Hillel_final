@@ -1,0 +1,82 @@
+.footer
+    display: flex
+    justify-content: space-between
+    position: relative
+    @media (max-width: 768px)
+        display: block
+        text-align: center
+    &__contact
+        @media (max-width: 768px)
+            width: 70%
+            margin: auto
+        &__maps
+            display: flex
+            column-gap: 10px
+            padding-bottom: 21px
+            @media (max-width: 768px)
+                justify-content: center
+            @media (max-width: 640px)
+                display: block
+                text-align: center
+                padding-bottom: 11px
+            &__item
+                @media (max-width: 768px)
+                    justify-content: center
+                    padding-bottom: 10px
+                &:nth-child(1)
+                    color: $col_main
+                    &::before
+                        content: ''
+                &:nth-child(2)
+                    &::before
+                        color: #B3B3BA  
+                        @media (max-width: 768px)
+                            content: ''
+                    a
+                        color: $col_active-regular
+                        font:700 0.75rem 'Montserrat'
+                        @include hoverAcccept           
+        &__connect
+            display: flex
+            column-gap: 10px
+            @media (max-width: 768px)
+                padding-bottom: 30px
+            @media (max-width: 640px)
+                display: block
+                text-align: center
+                padding-bottom: 0px
+            &__item
+                @media (max-width: 640px)
+                    justify-content: center
+                    padding-bottom: 10px
+                &::before
+                    color: #B3B3BA
+                    @media (max-width: 640px)
+                        content: ''
+                &:nth-child(1)
+                    &::before
+                        content: ''
+                &:nth-child(2)
+                    a
+                        color: $col_main
+                &:nth-child(3)
+                    a
+                        color: $col_active-regular
+                        @include hoverAcccept 
+                &__link
+                    font-weight: 700
+                    svg
+                        fill: #24A3FF
+                        transition: all .3s ease-out
+                        &:hover
+                            fill: $col_accent
+    &__copyright
+        color: $col_gray-text
+        @media (max-width: 980px)
+            position: absolute
+            right: 0
+        @media (max-width: 768px)
+            position: static
+            text-align: center
+
+    

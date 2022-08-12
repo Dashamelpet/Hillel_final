@@ -1,0 +1,37 @@
+@import design-tokens/colors
+@import design-tokens/var
+
+@mixin flex()
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+@mixin hoverAcccept()
+    transition: all .3s ease-out
+    &:hover
+        color: $col_accent
+        cursor: pointer
+@mixin hiddenText()
+    &::after
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        left: 0
+        bottom: 0
+        right: 0
+        height: 15%
+        background: linear-gradient(180deg,rgba(255,255,255,0) 0%,#ffffff 100%)
+
+@mixin inputStyle()
+    background: #fff
+    border: 1px solid #fff
+    border-radius: 8px
+    color: #B3B3BA
+    font:400 1rem 'Montserrat'        
+    &:focus 
+        outline: none 
+        border: 1px solid #24A3FF
+
+    
+
+    

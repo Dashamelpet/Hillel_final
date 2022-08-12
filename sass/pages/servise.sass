@@ -1,0 +1,71 @@
+@import design-tokens/colors
+@import design-tokens/mixins
+@import design-tokens/var
+.header
+    &__logo
+        &__breakpoints
+            display: flex
+            column-gap: 4px
+            &__slash
+                color: $col_accent
+                @media (max-width: 640px) 
+                    height: 26px
+            &__nav
+                -webkit-text-fill-color: #fff
+                font-weight: normal
+                @media (max-width: 640px) 
+                    font-size: 1.25rem
+.main
+    &__block
+        &__item
+            display: flex
+            flex-direction: column
+            row-gap: 28px
+            align-items: center
+            text-align: center
+            font-size: 1.1875rem
+            color: #fff
+            line-height: 1.875rem
+            border-bottom: 4px solid  rgba(255, 255, 255, 0.5)
+            &__img
+                background-color: #fff
+                width: 92px
+                height: 92px
+                border-radius: 24px
+                display: flex
+                align-items: center
+                justify-content: center
+            &__btn
+                &__link
+                    cursor: pointer
+                    color: #FFFFFF
+                    font:700 1rem 'Montserrat'
+                    width: 208px
+                    text-align: center
+                    padding: 18px 0 18px
+                    background: #24A3FF
+                    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5)
+                    border-radius: 12px
+                    border: 1px solid #24A3FF
+                    &:hover
+                        background: #0085FF
+                    &:active
+                        background: #006CCF
+        &__advantage
+            h4
+                color: #fff
+                padding-top: 30px
+            &__list
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                row-gap: 15px
+                &__item
+                    width: 47.22%
+                    white-space: inherit
+                    color: #fff
+                    font: 400 1.125rem/1.625rem 'Montserrat'
+                    align-items: start
+                    @media (max-width: 640px) 
+                        width: 100%
+
