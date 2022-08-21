@@ -1,0 +1,85 @@
+@import design-tokens/colors
+@import design-tokens/mixins
+@import design-tokens/var
+
+.page_publication
+    .main__publication__articles
+        flex-wrap: wrap
+        row-gap: 30px
+        &__item
+            width: calc( (100% - 60px)  / 3 )
+            @media (max-width: 980px)
+                width: calc( (100% - 30px) / 2 )
+            @media (max-width: 540px)
+                width: 100%
+.switch         
+    position: relative
+    width: 214px
+    height: 42px
+    margin: auto
+    display: flex   
+.switch
+    input
+        display: none
+.toogle 
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #E6E6F0
+    border-radius: 12px
+    -webkit-transition: .4s
+    transition: .4s
+    &::before
+        position: absolute
+        content: "news"
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #323264
+        font-weight: 700
+        height: 38px
+        width: 105px
+        border-radius: 10px
+        left: 2px
+        bottom: 2px
+        background-color: white
+        -webkit-transition: .4s
+        transition: .4s
+input:checked + .toogle:before 
+    -webkit-transform: translateX(105px)
+    -ms-transform: translateX(105px)
+    transform: translateX(105px)
+    content: 'articles'
+.article_block
+    display: none
+    column-gap: 3.67%
+    &__item
+            width: 48.165%
+            div
+                background-color: #fff
+                border-radius: 0 0 12px 12px
+                height: 230px
+                padding: 30px
+                overflow: hidden
+                h5
+                    font-size: 1rem
+                    font-weight: 700
+                    color: #24A3FF
+                p
+                    margin-top: 15px
+                    padding-top: 15px
+                    border-top: 4px solid #E6E6F0
+                    color: #000
+                    font: 400 0.875rem/1.375rem "Montserrat"
+
+body
+    &.slide
+        .article_block
+            display: flex
+body
+    &.news
+        .main__publication__articles__item
+            display: none
